@@ -35,7 +35,8 @@ html, body {
     width: 100%;
     margin: 0 calc(10% + 5vw);
     margin: auto;
-    max-width: 100vw;
+    min-width: 100vw;
+    max-width: 100%;
 }
 .fa {
     display: inline-block;
@@ -79,6 +80,8 @@ header {
     padding: 85px 0px 10px;
     width: 100%;
     max-width: 100vw;
+    max-width: 100%;
+
 
 }
 img.logo {
@@ -111,6 +114,9 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-width: 100vw;
+    max-width: 100%;
+
 }
 h1 {
 font-weight: 300;
@@ -148,25 +154,25 @@ form {
  margin-top: 1em;
 }
 .button {
-     background-color: hsl(223, 87%, 63%);
-     color: white;
-     margin: 0;
-     margin-top: 1em;
-     width: 200px;
-     width: calc(415px - 15vw);
-     height: 55px;
-     font-size: 1.2vw;
-     letter-spacing: 0.06em;
-     border: none;
-     border: hsl(240, 75%, 98%);
-     box-shadow: hsl(240, 75%, 98%) 3px 3px 3px 3.5px;
-     box-shadow: hsl(0, 0%, 75%) 1px 1px 5px 0.5px;
-     outline: none;
-     border: radius 1.5em;;
-     -moz-border-radius:1.5em;
-     -ms-border-radius:1.5em;
-     -o-border-radius:1.5em;
-     -webkit-border-radius:1.5em;
+background-color: hsl(223, 87%, 63%);
+color: white;
+margin: 0;
+margin-top: 1em;
+width: 200px;
+width: calc(415px - 15vw);
+height: 55px;
+font-size: 1.2vw;
+letter-spacing: 0.06em;
+border: none;
+border: hsl(240, 75%, 98%);
+box-shadow: hsl(240, 75%, 98%) 3px 3px 3px 3.5px;
+box-shadow: hsl(0, 0%, 75%) 1px 1px 5px 0.5px;
+outline: none;
+border: radius 1.5em;;
+-moz-border-radius:1.5em;
+-ms-border-radius:1.5em;
+-o-border-radius:1.5em;
+-webkit-border-radius:1.5em;
 }
 img.img {
     margin: 62px auto;
@@ -181,6 +187,7 @@ footer {
      align-items: center;
      justify-content: center;
     width: 100%;
+    min-width: 100vw;
     max-width: 100%; /*IE*/
 }
 footer a {
@@ -215,13 +222,16 @@ li.social-item {
     border: 1px solid hsl(0, 0%, 59%);
     border-radius: 50%;
     list-style: none;
-    font-size: 1vw;
+    font-size: calc(8px + 0.5vw);
+    font-size: 70%;
     margin: 3px 7px 3px 7px;
 } 
 li.social-item a{
     position: absolute;
     top: 0.5em;
+    top: 20%;
     left: 0.5em;
+    left: 30%;
 }
 li.social-item i{
     color: hsl(223, 87%, 63%);
@@ -254,8 +264,6 @@ li.social-item i{
     font-size: 1vw;
     color: hsl(0, 0%, 59%);
     margin: 0 0 10px;
-
-
 }
 .attribution a:hover {
     transform: none;
@@ -268,7 +276,124 @@ li.social-item i{
 }
 .attribution a:visited {
     color: hsl(223, 87%, 63%);
-
 }
 
 /*Mobile Layout*/
+@media screen and (max-width: 991px) {
+
+    header {
+        padding: 0;
+        margin: 190px 0 50px;
+
+    }
+    img.logo {
+        width: 120%;
+        min-width: 120%;
+    }
+    h1 {
+        font-size: calc(24px + 2.55vw);
+        letter-spacing: 0.3px;
+    }
+    p{
+        margin: 25px 0;
+        font-size: calc(20px + 0.4vw);
+    }
+
+    form {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    .email {
+        width: calc(638px - 10vw);
+        height: 82px;
+        font-size: 3.2vw;
+        border-radius: 4.5vw;
+        -webkit-border-radius: 4.5vw;
+        -moz-border-radius: 4.5vw;
+        -ms-border-radius: 4.5vw;
+        -o-border-radius: 4.5vw;
+        padding-left: 9vw;
+        margin: 0.5em 0;
+}
+.button {
+        margin: 0;
+        margin-top: 0.5em;
+        width: 200px;
+        width: calc(638px - 10vw);
+        height: 80px;
+        font-size: 3.2vw;
+        letter-spacing: 0.06em;
+        border: none;
+        border: hsl(240, 75%, 98%);
+        box-shadow: hsl(240, 75%, 98%) 3px 3px 3px 3.5px;
+        box-shadow: hsl(0, 0%, 75%) 1px 1px 5px 0.5px;
+        outline: none;
+        border-radius: 4.5vw;
+        -webkit-border-radius: 4.5vw;
+        -moz-border-radius: 4.5vw;
+        -ms-border-radius: 4.5vw;
+        -o-border-radius: 4.5vw;
+}
+img.img {
+    margin: 108px auto;
+    max-width: 85%;
+}
+footer {
+    margin: 130px auto 15px;
+}
+.socials {
+    margin: 0 ;
+}
+
+li.social-item {
+    width: 60px;
+    height: 60px;
+    font-size: calc(8px + 0.5vw);
+    font-size: 150%;
+    margin: 3px 15px 3px 15px;
+} 
+.copyright {
+    font-size: 2.65vw;
+    margin: 55px 0 10px;
+}   
+.attribution {
+    font-size: 2vw;
+} 
+}
+@media screen and (max-width: 670px) {
+    html, body {
+        margin: 10px;
+        max-width: 100vw;
+        min-width: 100%;
+        margin: 0 auto;
+    }
+    h1 {
+        font-size: calc(24px + 1vw);
+    }
+    .email {
+        padding-left: 4vw;
+        width: calc(75vw - 10vw);
+        height: 62px;
+        font-size: calc(1.8vw + 16px);        
+        border-radius: 8vw;
+        -webkit-border-radius: 8vw;
+        -moz-border-radius: 8vw;
+        -ms-border-radius: 8vw;
+        -o-border-radius: 8vw;
+
+}
+.button {
+        width: calc(75vw - 10vw);
+        height: 62px;
+        font-size: calc(1.8vw + 16px);
+        border-radius: 8vw;
+        -webkit-border-radius: 8vw;
+        -moz-border-radius: 8vw;
+        -ms-border-radius: 8vw;
+        -o-border-radius: 8vw;
+}
+}
