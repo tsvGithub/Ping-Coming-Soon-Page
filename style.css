@@ -150,9 +150,33 @@ form {
     margin-top: 1em;
     outline: none;
 }
+.email:focus{
+    outline:none;
+}
+input:required { 
+    box-shadow: none; 
+}
 .email:hover {
     border: 1px double hsl(223, 100%, 88%);
     font-style: italic;
+}
+.emailWarning{
+    height: auto;
+    font-size: calc(10px + 0.5vw);
+    font-style: italic;
+    margin: 1vw;
+    text-align: center;
+    color:hsl(354, 100%, 66%);
+}
+
+/* .email:valid {
+    border: 2px solid green;
+} */
+.email:required {
+    /* border: 1px double greenyellow; */
+}
+.email:invalid {
+    /* border: 1px dashed red; */
 }
 .button {
     background-color: hsl(223, 87%, 63%);

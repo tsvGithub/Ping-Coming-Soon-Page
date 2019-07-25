@@ -9,13 +9,14 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
   <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 
     <!--[if lt IE 9]>
         <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 </head>
 <body>
   <!--[if lt IE 8]>
@@ -36,11 +37,17 @@
 <main class="main">
   <h1>We are launching <span>soon!</span></h1>
   <p>Subscribe and get notified</p>
-  <form action="/action_page.php" method="post" autocomplete="on">
-    <input class="email" type="email" name="email" id="email" required 
+
+  <form action="" method="post" autocomplete="on">
+
+    <input class="email" id="email" type="email" name="email" required 
     placeholder="Your email address&hellip;" autocomplete="on" >
-    <input class="button" type="submit" value="Notify Me">
+   
+    <div class="emailWarning" id="emailWarning" ></div>
+
+    <input class="button" type="submit" value="Notify Me" onclick="return emailValid()">
   </form>
+
   <img class="img" src="images/illustration-dashboard.png"></img>
 </main>
  <footer>
