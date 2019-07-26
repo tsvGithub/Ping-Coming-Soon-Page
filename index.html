@@ -32,6 +32,10 @@
   <header>
     <a href="https://beta.frontendmentor.io/challenges/ping-single-column-coming-soon-page-5cadd051fec04111f7b848da">
       <img class="logo" src="images/logo.svg" alt="logo" role="img" aria-label="logo image" >
+        <!--[if IE]>
+        <img class="logo" src="images/logo.png" alt="logo" role="img" aria-label="logo image" >
+
+<![endif]-->
     </a>
   </header>
 <main class="main">
@@ -39,12 +43,12 @@
   <p>Subscribe and get notified</p>
 
   <form action="" method="post" autocomplete="on">
-
+    <div class="form">
     <input class="email" id="email" type="email" name="email" required 
     placeholder="Your email address&hellip;" autocomplete="on" >
    
     <div class="emailWarning" id="emailWarning" ></div>
-
+      </div>
     <input class="button" type="submit" value="Notify Me" onclick="return emailValid()">
   </form>
 
